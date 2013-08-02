@@ -1,0 +1,18 @@
+<h1> Register </h1>
+<%= form_for :user_form, url: {action: "create"} do |f| %> 
+<%= f.label :username %>
+<%= f.text_field :username %> 
+<%= f.label :name %>
+<%= f.text_field :name %> 
+ <%= f.label :password %>
+<%= f.password_field :password %>
+<br>
+<%= label_tag(:sex, "male") %>
+<%= radio_button_tag(:sex, "male") %>
+<%= label_tag(:sex, "female") %>
+<%= radio_button_tag(:sex, "female") %>
+<%= f.label :dob %>
+<%= date_field(:user, :dob) %> 
+<br>
+<%= f.submit "Create my account", class: "btn btn-large btn-primary" %> 
+<% end %>

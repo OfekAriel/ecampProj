@@ -1,0 +1,50 @@
+<div class="page-header">
+	<h1><%= @user.name %>
+	<%= link_to image_tag("nigga.jpg", alt: @user.name, class: "thumbnail span1") %>
+ 	<a href="#" class="btn btn-primary btn-large pull-right">+ <%= @user.name %></a>
+ </h1>
+</div>
+
+<div class="row">
+<!-- 	<ul class="nav nav-tabs span9">
+		<li class="active">
+			<a href="#profile" data-toggle="tab">Profile</a>
+		</li>
+		<li>
+			<a href="#" data-toggle="tab">Info</a>
+		</li>
+	</ul>
+ --><!-- 	<div id="tabStuff" class="tab-content">
+		<div class="tab-pane fade active in" id="profile">
+			<p>testing stuff</p>
+		</div>
+	</div> -->
+
+      <ul id="myTab" class="nav nav-tabs">
+	      	<li><a href="#profile" data-toggle="tab">Profile</a></li>
+		    <li class="active"><a href="#home" data-toggle="tab">Info</a></li>
+      </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade in active" id="home">
+        <p>test</p>
+      </div>
+      <div class="tab-pane fade" id="profile">
+        <p>test2</p>
+      </div>
+
+
+</div>
+<div class="row">
+	<div class="span3">
+		<table class="table table-bordered">
+			<tr>
+				<td> <b>Sex:</b></td>
+				<td> <%= @user.sex %></td>
+			</tr>
+			<tr>
+				<td><b>Birthday:</b></td>
+				<td> <%= @user.dob %></td>
+			</tr>
+		</table>
+	</div>	
+</div>
