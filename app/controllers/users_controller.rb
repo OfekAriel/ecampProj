@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 	def create
         @user = User.new(user_params)
         @user.admin = false;
-		@user.sex = params.require(:user_form).permit(:sex)
 		if @user.save 
 			#redirect_to @user
 		else
